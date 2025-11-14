@@ -53,17 +53,9 @@ function Navbar({ query, setQuery, mode, setMode }) {
     setQuery(e.target.value);
   }
 
-  // function handleMode() {
-  //   setMode(mode === "light" ? "dark" : "light");
-  //   console.log("body ", document.body);
-  //   if (mode === "light") {
-  //     document.body.style.backgroundImage = "url('dark-updated.jpg')";
-  //   }
-  // }
-
   function handleMode() {
-    const newMode = mode === "light" ? "dark" : "light"; // determine the next mode
-    setMode(newMode); // update state
+    const newMode = mode === "light" ? "dark" : "light";
+    setMode(newMode);
 
     if (newMode === "dark") {
       document.body.style.backgroundImage = "url('./dark-updated-public.jpg')";
